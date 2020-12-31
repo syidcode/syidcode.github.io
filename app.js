@@ -14,7 +14,7 @@ var app = new Vue({
       mirror: false,
     });
     self.scanner.addListener('scan', function (content, image) {
-      window.open(content, '_blank', config='height=1920,width=540');
+      window.open(content, '_blank', config='height=1080,width=960');
       console.log(content);
       self.scans.unshift({
         date: +(Date.now()),
