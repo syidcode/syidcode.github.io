@@ -14,10 +14,12 @@ var app = new Vue({
       mirror: true,
     });
     self.scanner.addListener('scan', function (content, image) {
-      let url = content;
-      url.fill("7", 17, 18);
-      window.open(url, '_blank', config='height=1080,width=960');
-      console.log(url);
+      var url = content;
+      var urlSlice = url.slice(19, url.length);
+      var urlTitle = "http://10.116.1.217";
+      var newUrl = urlTitle + urlSlice;
+      window.open(newUrl, '_blank', config='height=1080,width=960');
+      console.log(newUrl);
       self.scans.unshift({
         date: +(Date.now()),
         content: content
