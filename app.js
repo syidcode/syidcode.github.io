@@ -16,7 +16,9 @@ var app = new Vue({
     self.scanner.addListener('scan', function (content, image) {
       var url = content;
       var urlSlice = url.slice(19, url.length);
+      //////////////////////////
       var urlTitle = "http://10.116.1.217";
+      //////////////////////////
       var newUrl = urlTitle + urlSlice;
       window.open(newUrl, '_blank', config='height=1080,width=960');
       console.log(newUrl);
